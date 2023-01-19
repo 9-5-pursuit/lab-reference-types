@@ -6,21 +6,12 @@
  */
 function addNewStore(stores, store) {
 
-  const Array = [ 
-        {
-         "city": "Astoria",
-         "state": "NY",
-         "street": "42-11 Broadway",
-         "zip": "11103",
-       },
-     ];
 
-  const newStore = Array;
- store.push();
+  const newStore = stores;
+  newStore.push(store);
+
 
   //newStore.concat(store)
-
-console.log(newStore)
 
 return stores;
 }
@@ -35,8 +26,8 @@ function removeStoreAtPosition(stores, index) {
 
 let removeStoreAtPosition = stores
 
-removeStoreAtPosition.pop()
-  return store
+removeStoreAtPosition.splice(index, 1)
+  return stores
 }
 
 /**
