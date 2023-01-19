@@ -37,29 +37,15 @@ function duplicateStore(store) {
 
   for (let game of store.boardGames) {
     storeCopy.boardGames.push(game);
-    console.log("game is " + game);
   };
 
   for (let key in store.address) {
     storeCopy.address[key] = store.address[key];
   };
+
   return storeCopy;
-      
   return store;
 };
-
-const store = {
-  name: "Gamestoria",
-  boardGames: ["Terra Mystica", "Alhambra", "Scythe", "Carcassonne", "Azul"],
-  address: {
-    street: "42-11 Broadway",
-    city: "Astoria",
-    state: "NY",
-    zip: "11103",
-  },
-};
-
-console.log(duplicateStore(store))
 
 module.exports = {
   addNewStore,
