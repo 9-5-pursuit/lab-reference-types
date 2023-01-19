@@ -4,7 +4,12 @@
  * @param {Object} store - An object representing a single store. See the instructions for details on its shape.
  * @returns {Object[]} The same `stores` array that was inputted.
  */
-function addNewStore(stores, store) {}
+// updated 
+// add store to stores return the modified array
+function addNewStore(stores, store) {
+  stores.push(store)
+  return stores
+}
 
 /**
  * Removes a store object at the given position.
@@ -12,14 +17,40 @@ function addNewStore(stores, store) {}
  * @param {number} index - A number representing the index of the store to be removed from the array.
  * @returns {Object[]} The same `stores` array that was inputted.
  */
-function removeStoreAtPosition(stores, index) {}
+// original
+// removes depending on its index return the modified array 
+// only removes one at a time
+function removeStoreAtPosition(stores, index) {
+  stores.splice(index, 1)
+  return stores
+}
 
 /**
  * Creates a duplicate of the `store` object. No references should be shared between the inputted `store` and the result.
  * @param {Object} store - An object representing a single store. See the instructions for details on its shape.
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
-function duplicateStore(store) {}
+// a copy
+// deep copy is completely disconnected from the original object unlike the shallow copy where some are still linked together
+function duplicateStore(store) {
+  return JSON.parse(JSON.stringify(store))
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = {
   addNewStore,
