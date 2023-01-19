@@ -33,7 +33,8 @@ function removeStoreAtPosition(stores, index) {
 // a copy
 // deep copy is completely disconnected from the original object unlike the shallow copy where some are still linked together
 function duplicateStore(store) {
-  return JSON.parse(JSON.stringify(store))
+  const newStore = JSON.parse(JSON.stringify(store))
+  return newStore
 }
 
 
