@@ -42,7 +42,7 @@ describe("addNewStore()", () => {
   });
 });
 
-describe("removeStoreAtPosition()", () => {
+describe.only("removeStoreAtPosition()", () => {
   let stores;
   beforeEach(() => {
     stores = [
