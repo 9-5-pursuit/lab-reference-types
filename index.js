@@ -5,7 +5,7 @@
  * @returns {Object[]} The same `stores` array that was inputted.
  */
 function addNewStore(stores, store) {
-
+// add a single store to the stores object
   stores.push(store);
   return stores;
 }
@@ -17,15 +17,10 @@ function addNewStore(stores, store) {
  * @returns {Object[]} The same `stores` array that was inputted.
  */
 function removeStoreAtPosition(stores, index) {
-  
-  
-  for (let i = 0; i < stores.length; i++) {
-    if (stores[i] === index) {
-      stores[i].splice(i, 1);
-    }
-    return stores;
-  }
-  
+  // using splice method to remove the item at the given position
+  stores.splice(index, 1);
+  return stores;
+ 
   }
 
 /**
@@ -34,10 +29,13 @@ function removeStoreAtPosition(stores, index) {
  * @returns {Object} The duplicated store object. This should not be the same as the store that was inputted.
  */
 function duplicateStore(store) {
-
+// using Object.assign method copy the store object to the variable newStore
   let newStore = Object.assign({}, store);  //  (OR)let newStore = {...store}
+// add a new array for the boardGames key
   newStore.boardGames = Object.assign([], store.boardGames);
+// add a new object for the address key
   newStore.address = Object.assign({}, store.address);
+// return the copied store
   return newStore;
 }
 
